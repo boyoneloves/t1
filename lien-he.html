@@ -1,0 +1,36 @@
+<div id="contactModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+        <button id="closeContactPopupBtn" class="modal-close-btn" aria-label="Đóng cửa sổ">&times;</button>
+        <h2 id="modalTitle">Thông Tin Đặt Hàng</h2>
+        <p id="modalDesc">Vui lòng điền đầy đủ thông tin dưới đây.</p>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="customerName">Họ và Tên:</label>
+                <input type="text" id="customerName" name="customerName" required>
+            </div>
+            <div class="form-group">
+                <label for="customerPhone">Số Điện Thoại:</label>
+                <input type="tel" id="customerPhone" name="customerPhone" required pattern="[0-9]{10,11}" title="Số điện thoại gồm 10-11 chữ số">
+            </div>
+            <div class="form-group">
+                <label for="customerAddress">Địa Chỉ Nhận Hàng:</label>
+                <textarea id="customerAddress" name="customerAddress" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="productCombo">Chọn Gói Sản Phẩm:</label>
+                <select id="productCombo" name="productCombo" required>
+                    <option value="" disabled selected>-- Chọn gói --</option>
+                    <option value="Combo 1 Hộp">Combo 1 Hộp Nhang Khuynh Diệp</option>
+                    <option value="Combo 3 Hộp">Combo 3 Hộp (Ưu đãi)</option>
+                    <option value="Combo 5 Hộp">Combo 5 Hộp (Tiết kiệm)</option>
+                    <option value="Tu Van Them">Cần tư vấn thêm</option>
+                </select>
+            </div>
+            <div class="form-group form-submit-area">
+                 <button type="submit" class="cta-button" id="submitContactFormBtn">Gửi Thông Tin Đặt Hàng</button>
+                 <p id="formStatus" class="form-status-message" aria-live="polite"></p>
+            </div>
+        </form>
+    </div>
+</div>
